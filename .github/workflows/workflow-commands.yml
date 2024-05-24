@@ -16,6 +16,6 @@ jobs:
                 echo "Message 2"
                 echo "::endgroup::"
             - name: Set env variable
-              run: echo "ACTION_ENV=production" >> $GITHUB_ENV
+              run: echo "MY_VAL=production" >> $GITHUB_ENV
             - name: Show variable
               run: echo $MY_VAL
