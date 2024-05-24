@@ -9,7 +9,7 @@ on:
 
 jobs:
   expression-functions:
-    runs-on: [ubuntu-latest, ubuntu-22.04, ubuntu-20.04]
+    runs-on: ubuntu-latest
     steps:
       - name: Check if string contains substring
         if: contains('Hello world', 'llo')
