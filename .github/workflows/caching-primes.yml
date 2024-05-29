@@ -10,8 +10,8 @@ jobs:
             - uses: actions/checkout@v3
             - name: Make scripts executable
               run: |
-                chmod +x /generate-primes.sh
-                chmod +x /primes.sh
+                chmod +x ./generate-primes.sh
+                chmod +x ./primes.sh
 
             - name: Cache Primes
               id: cache-primes
@@ -21,7 +21,7 @@ jobs:
                 key: ${{ runner.os}}-primes
             - name: Generate Prime Numbers
               if: steps.cache-primes.outputs.cache-hit != 'true'
-              run: /generate-primes.sh -d prime-numbers
+              run: ./generate-primes.sh -d prime-numbers
 
             - name: Use Prime Numbers
-              run: /primes.sh -d prime-numbers
+              run: ./primes.sh -d prime-numbers
